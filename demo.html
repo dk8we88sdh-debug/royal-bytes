@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Bites | Premium Restaurant</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101010;
+    color: white;
+}
+
+header {
+    background: #171717;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: #e6ad54;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e6ad54;
+}
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    background:
+    linear-gradient(90deg, rgba(0,0,0,.92), rgba(0,0,0,.35)),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #e6ad54;
+}
+
+.hero p {
+    color: #ddd;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #d89d42;
+    color: #111;
+    padding: 14px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 75px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    color: #e6ad54;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #aaa;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.food-card {
+    background: #1c1c1c;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.food-card:hover {
+    transform: translateY(-7px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.food-info {
+    padding: 20px;
+}
+
+.food-info h3 {
+    margin-bottom: 10px;
+}
+
+.food-info p {
+    color: #aaa;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.price {
+    color: #e6ad54;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    margin: 15px 0;
+}
+
+.food-info button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #d89d42;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.food-info button:hover {
+    background: white;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    background: #191919;
+}
+
+.about img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.about h2 {
+    color: #e6ad54;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #bbb;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.review {
+    background: #1c1c1c;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.review p {
+    color: #bbb;
+    line-height: 1.7;
+    margin: 15px 0;
+}
+
+.stars {
+    color: #e6ad54;
+}
+
+.contact {
+    text-align: center;
+    background: #191919;
+}
+
+.contact h2 {
+    color: #e6ad54;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: #bbb;
+    line-height: 2;
+}
+
+.contact .btn {
+    margin-top: 25px;
+}
+
+footer {
+    background: #090909;
+    text-align: center;
+    padding: 25px;
+    color: #888;
+}
+
+@media(max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 50px 7%;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 55px 7%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ROYAL BITES</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <div class="hero-content">
+        <h1>Experience <span>Luxury</span> Dining</h1>
+        <p>
+            Discover delicious flavors, fresh ingredients
+            and unforgettable dining experiences.
+            Welcome to Royal Bites Restaurant.
+        </p>
+        <a href="#menu" class="btn">Explore Our Menu</a>
+    </div>
+</div>
+
+<section id="menu">
+    <div class="section-title">
+        <h2>Our Special Menu</h2>
+        <p>Delicious food made with passion.</p>
+    </div>
+
+    <div class="menu-grid">
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80" alt="Burger">
+            <div class="food-info">
+                <h3>Classic Beef Burger</h3>
+                <p>Juicy beef, fresh vegetables and special sauce.</p>
+                <span class="price">Rs. 850</span>
+                <button onclick="order('Classic Beef Burger')">Order Now</button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=700&q=80" alt="Pizza">
+            <div class="food-info">
+                <h3>Italian Pizza</h3>
+                <p>Fresh cheese, delicious toppings and crispy crust.</p>
+                <span class="price">Rs. 1,400</span>
+                <button onclick="order('Italian Pizza')">Order Now</button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=700&q=80" alt="Salad">
+            <div class="food-info">
+                <h3>Fresh Healthy Salad</h3>
+                <p>Fresh vegetables with a delicious dressing.</p>
+                <span class="price">Rs. 550</span>
+                <button onclick="order('Fresh Healthy Salad')">Order Now</button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=700&q=80" alt="Pasta">
+            <div class="food-info">
+                <h3>Creamy Pasta</h3>
+                <p>Rich creamy sauce with fresh herbs and pasta.</p>
+                <span class="price">Rs. 950</span>
+                <button onclick="order('Creamy Pasta')">Order Now</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=85" alt="Restaurant dining">
+
+    <div>
+        <h2>About Royal Bites</h2>
+        <p>
+            At Royal Bites, we believe every meal should
+            be special. Our restaurant combines fresh
+            ingredients, delicious recipes and a welcoming
+            atmosphere.
+        </p>
+        <p>
+            Whether you are enjoying dinner with family
+            or celebrating a special occasion, we are here
+            to make your experience memorable.
+        </p>
+        <a href="#contact" class="btn">Contact Us</a>
+    </div>
+</section>
+
+<section id="reviews">
+    <div class="section-title">
+        <h2>Customer Reviews</h2>
+        <p>What our sample customers say.</p>
+    </div>
+
+    <div class="reviews">
+        <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>"Beautiful atmosphere and delicious food. A lovely dining experience."</p>
+            <strong>— Customer 1</strong>
+        </div>
+
+        <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>"The food presentation is amazing and the menu has great options."</p>
+            <strong>— Customer 2</strong>
+        </div>
+
+        <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>"A wonderful place to enjoy a meal with family and friends."</p>
+            <strong>— Customer 3</strong>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Visit Royal Bites</h2>
+    <p>Address: Lahore, Pakistan (Demo Address)</p>
+    <p>Email: hello@royalbites.example</p>
+    <p>Opening Hours: 12 PM – 11 PM</p>
+    <a href="#" onclick="contactUs(event)" class="btn">Contact on WhatsApp</a>
+</section>
+
+<footer>
+    <p>© 2026 Royal Bites Restaurant. Demo Website.</p>
+    <p>Designed with AI assistance.</p>
+</footer>
+
+<script>
+function order(item) {
+    alert("Thank you! You selected: " + item +
+    ". Please contact the restaurant to confirm your order.");
+}
+
+function contactUs(event) {
+    event.preventDefault();
+
+    // Replace this with the restaurant's real WhatsApp number.
+    const phone = "923001234567";
+    const message = encodeURIComponent(
+        "Hello Royal Bites! I would like to make an inquiry."
+    );
+
+    window.open(
+        "https://wa.me/" + phone + "?text=" + message,
+        "_blank"
+    );
+}
+</script>
+
+</body>
+</html>
