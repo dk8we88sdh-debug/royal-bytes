@@ -3,446 +3,221 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Royal Bites — a premium restaurant experience.">
 <title>Royal Bites | Premium Restaurant</title>
-<meta name="description" content="Welcome to Royal Bites! Explore delicious burgers, pizza, pasta and fresh food. Enjoy premium quality food and great taste.">
-<meta property="og:title" content="Royal Bites | Premium Restaurant">
-
-<meta property="og:description" content="Discover delicious food at Royal Bites. Explore our menu today!">
-
-<meta property="og:type" content="website">
-
-<meta property="og:url" content="https://dk8we88sdh-debug.github.io/royal-bytes/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: #101010;
-    color: white;
-}
-
-header {
-    background: #171717;
-    padding: 20px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.logo {
-    color: #e6ad54;
-    font-size: 27px;
-    font-weight: bold;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 24px;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: #e6ad54;
-}
-
-.hero {
-    min-height: 570px;
-    display: flex;
-    align-items: center;
-    padding: 70px 8%;
-    background:
-    linear-gradient(90deg, rgba(0,0,0,.92), rgba(0,0,0,.35)),
-    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85")
-    center/cover;
-}
-
-.hero-content {
-    max-width: 600px;
-}
-
-.hero h1 {
-    font-size: clamp(42px, 6vw, 68px);
-    margin-bottom: 20px;
-}
-
-.hero h1 span {
-    color: #e6ad54;
-}
-
-.hero p {
-    color: #ddd;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-.btn {
-    display: inline-block;
-    background: #d89d42;
-    color: #111;
-    padding: 14px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: .3s;
-}
-
-.btn:hover {
-    background: white;
-    transform: translateY(-3px);
-}
-
-section {
-    padding: 75px 8%;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.section-title h2 {
-    color: #e6ad54;
-    font-size: 36px;
-    margin-bottom: 12px;
-}
-
-.section-title p {
-    color: #aaa;
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 25px;
-}
-
-.food-card {
-    background: #1c1c1c;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: .3s;
-}
-
-.food-card:hover {
-    transform: translateY(-7px);
-}
-
-.food-card img {
-    width: 100%;
-    height: 210px;
-    object-fit: cover;
-}
-
-.food-info {
-    padding: 20px;
-}
-
-.food-info h3 {
-    margin-bottom: 10px;
-}
-
-.food-info p {
-    color: #aaa;
-    line-height: 1.6;
-    font-size: 14px;
-}
-
-.price {
-    color: #e6ad54;
-    font-weight: bold;
-    font-size: 20px;
-    display: block;
-    margin: 15px 0;
-}
-
-.food-info button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    background: #d89d42;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.food-info button:hover {
-    background: white;
-}
-
-.about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 45px;
-    background: #191919;
-}
-
-.about img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-.about h2 {
-    color: #e6ad54;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.about p {
-    color: #bbb;
-    line-height: 1.9;
-    margin-bottom: 20px;
-}
-
-.reviews {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.review {
-    background: #1c1c1c;
-    padding: 25px;
-    border-radius: 10px;
-}
-
-.review p {
-    color: #bbb;
-    line-height: 1.7;
-    margin: 15px 0;
-}
-
-.stars {
-    color: #e6ad54;
-}
-
-.contact {
-    text-align: center;
-    background: #191919;
-}
-
-.contact h2 {
-    color: #e6ad54;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.contact p {
-    color: #bbb;
-    line-height: 2;
-}
-
-.contact .btn {
-    margin-top: 25px;
-}
-
-footer {
-    background: #090909;
-    text-align: center;
-    padding: 25px;
-    color: #888;
-}
-
-@media(max-width: 700px) {
-    header {
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    nav a {
-        margin: 0;
-    }
-
-    .hero {
-        min-height: 480px;
-        padding: 50px 7%;
-    }
-
-    .about {
-        grid-template-columns: 1fr;
-    }
-
-    section {
-        padding: 55px 7%;
-    }
-}
+:root{--gold:#d6ad65;--bg:#10100e;--card:#1c1c19;--cream:#eee7da;--muted:#aaa69d}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{background:var(--bg);color:#f8f5ef;font-family:Poppins,Arial,sans-serif}
+a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}
+.container{width:min(90%,1160px);margin:auto}.gold{color:var(--gold)}
+header{height:78px;background:#10100ef5;border-bottom:1px solid #343027;position:sticky;top:0;z-index:50}
+nav{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{font:700 26px 'Playfair Display',serif;letter-spacing:1px}.logo span{color:var(--gold)}
+.links{display:flex;gap:24px}.links a{font-size:11px;letter-spacing:1px;color:#ddd;transition:.2s}.links a:hover{color:var(--gold)}
+.nav-actions{display:flex;gap:9px;align-items:center}
+.cart-btn,.menu-toggle{background:transparent;border:1px solid var(--gold);color:var(--gold);padding:10px 13px;cursor:pointer}
+.menu-toggle{display:none}.btn{display:inline-block;background:var(--gold);color:#17130d;padding:14px 24px;border:1px solid var(--gold);font-size:11px;font-weight:700;letter-spacing:1px;cursor:pointer;transition:.25s}
+.btn:hover{background:transparent;color:var(--gold);transform:translateY(-2px)}
+.hero{min-height:640px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.48)),url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-content{max-width:660px;padding:90px 0}.eyebrow{color:var(--gold);font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:17px}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif}
+.hero h1{font-size:clamp(46px,7vw,82px);line-height:1.08;margin-bottom:22px}.hero h1 span{color:var(--gold);font-style:italic}
+.hero p{max-width:510px;color:#ddd;font-size:14px;line-height:1.9;margin-bottom:28px}.btn-outline{background:transparent;color:white;border-color:#aaa;margin-left:10px}
+section{padding:88px 0}.section-head{text-align:center;margin-bottom:42px}.section-head h2{font-size:clamp(32px,5vw,48px);margin:10px 0}.section-head p{font-size:13px;color:var(--muted);line-height:1.8}
+.filters{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.filter{background:transparent;color:#ddd;border:1px solid #514b3c;padding:10px 18px;cursor:pointer}.filter.active,.filter:hover{background:var(--gold);color:#111;border-color:var(--gold)}
+.food-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:23px}
+.food-card{background:var(--card);border:1px solid #343027;overflow:hidden;transition:.3s}.food-card:hover{transform:translateY(-7px);border-color:var(--gold);box-shadow:0 14px 35px #d6ad6518}
+.food-card img{width:100%;height:220px;display:block;object-fit:cover;transition:.4s}.food-card:hover img{transform:scale(1.045)}
+.food-info{padding:20px}.food-info h3{font-size:21px;margin-bottom:9px}.food-info p{color:var(--muted);font-size:12px;line-height:1.8;min-height:44px}
+.food-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:18px}.price{color:var(--gold);font-weight:700}.add-btn{background:transparent;border:1px solid var(--gold);color:var(--gold);padding:9px 13px;font-size:10px;font-weight:600;cursor:pointer}.add-btn:hover{background:var(--gold);color:#111}
+.about{background:var(--cream);color:#201d17}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.about-grid img{width:100%;height:420px;object-fit:cover}.about h2{font-size:clamp(34px,5vw,49px);line-height:1.2;margin:13px 0 20px}.about p{font-size:13px;color:#696258;line-height:2;margin-bottom:15px}
+.stats{background:#1a1915;padding:52px 0}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}.stat h3{font-size:38px;color:var(--gold)}.stat p{font-size:10px;color:#aaa;letter-spacing:2px;margin-top:8px}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.review{background:var(--card);border:1px solid #39352b;padding:26px}.stars{color:var(--gold);letter-spacing:3px;margin-bottom:14px}.review p{font:16px/1.8 'Playfair Display',serif;color:#ccc;margin-bottom:18px}.review strong{font-size:12px;color:var(--gold)}
+.reservation{background:linear-gradient(#000c,#000c),url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=85') center/cover}
+.form{max-width:700px;margin:auto;padding:30px;background:#171713ed;border:1px solid #51452f}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form input,.form select,.form textarea{width:100%;padding:13px;background:#26251f;border:1px solid #514b3c;color:white;outline:none}.form textarea{margin-top:14px;resize:vertical}.form button{width:100%;margin-top:16px}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}.contact-box{background:var(--card);padding:27px;border:1px solid #343027}.contact-box h3{color:var(--gold);margin-bottom:12px}.contact-box p{color:#aaa;font-size:12px;line-height:1.8}
+footer{background:#090908;padding:34px 0;text-align:center;border-top:1px solid #29271f}footer p{color:#999;font-size:11px;line-height:2;margin-top:8px}
+.cart-panel{position:fixed;right:-430px;top:0;width:min(410px,100%);height:100vh;background:#191915;z-index:100;padding:24px;transition:.3s;overflow:auto;box-shadow:-10px 0 40px #0008}.cart-panel.open{right:0}
+.cart-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #444;padding-bottom:17px}.cart-head h2{font-size:25px}.close{background:none;border:0;color:white;font-size:27px;cursor:pointer}
+.cart-item{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #39362e;font-size:12px}.cart-item small{display:block;color:var(--gold);margin-top:4px}.qty-controls{display:flex;align-items:center;gap:9px}.qty-controls button{background:#333;color:white;border:0;padding:5px 9px;cursor:pointer}
+.cart-total{display:flex;justify-content:space-between;color:var(--gold);font-weight:700;font-size:18px;margin:22px 0}.cart-panel>.btn{width:100%;text-align:center}
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,100px);background:var(--gold);color:#111;padding:12px 20px;font-size:12px;z-index:150;transition:.25s}.toast.show{transform:translate(-50%,0)}
+@media(max-width:800px){.links{display:none;position:absolute;top:78px;left:0;width:100%;background:#151510;padding:24px;flex-direction:column;gap:18px}.links.show{display:flex}.menu-toggle{display:block}.food-grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.review-grid{grid-template-columns:1fr}}
+@media(max-width:550px){.container{width:92%}.hero{min-height:560px}.food-grid{grid-template-columns:1fr}.food-card img{height:230px}.stats-grid{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.form{padding:20px}.btn-outline{margin:12px 0 0}}
 </style>
-    <meta name="google-site-verification" content="6UC2tfr344F1uTlFP1LD7qqECkX7Cu8hesqqKBFRHVg" />
 </head>
-
 <body>
-
 <header>
-    <div class="logo">ROYAL BITES</div>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#about">About</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<nav class="container">
+<a href="#home" class="logo">ROYAL <span>BITES</span></a>
+<div class="links" id="navLinks">
+<a href="#home">HOME</a><a href="#menu">MENU</a><a href="#about">ABOUT</a><a href="#reviews">REVIEWS</a><a href="#reservation">RESERVATION</a><a href="#contact">CONTACT</a>
+</div>
+<div class="nav-actions">
+<button class="cart-btn" onclick="openCart()">CART (<span id="cartCount">0</span>)</button>
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+</div>
+</nav>
 </header>
 
-<div class="hero" id="home">
-    <div class="hero-content">
-        <h1>Experience <span>Luxury</span> Dining</h1>
-        <p>
-            Discover delicious flavors, fresh ingredients
-            and unforgettable dining experiences.
-            Welcome to Royal Bites Restaurant.
-        </p>
-        <a href="#menu" class="btn">Explore Our Menu</a>
-    </div>
+<section class="hero" id="home"><div class="container"><div class="hero-content">
+<div class="eyebrow">WELCOME TO ROYAL BITES</div>
+<h1>Experience The <span>Art</span> Of Fine Dining</h1>
+<p>Discover exceptional flavors, elegant atmosphere and unforgettable dining experiences. Every dish tells a story of passion and quality.</p>
+<a href="#menu" class="btn">EXPLORE OUR MENU</a><a href="#reservation" class="btn btn-outline">BOOK A TABLE</a>
+</div></div></section>
+
+<section id="menu"><div class="container">
+<div class="section-head"><div class="eyebrow">OUR SPECIALITIES</div><h2>Discover Our <span class="gold">Menu</span></h2><p>Fresh ingredients. Beautiful presentation. Unforgettable taste.</p></div>
+<div class="filters">
+<button class="filter active" onclick="filterFood('all',this)">All</button>
+<button class="filter" onclick="filterFood('burger',this)">Burgers</button>
+<button class="filter" onclick="filterFood('pizza',this)">Pizza</button>
+<button class="filter" onclick="filterFood('pasta',this)">Pasta</button>
+<button class="filter" onclick="filterFood('salad',this)">Salads</button>
 </div>
+<div class="food-grid">
+<article class="food-card" data-category="burger"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700" alt="Beef burger"><div class="food-info"><h3>Royal Beef Burger</h3><p>Juicy beef patty, fresh lettuce and signature sauce.</p><div class="food-bottom"><span class="price">Rs. 850</span><button class="add-btn" onclick="addCart('Royal Beef Burger',850)">ADD +</button></div></div></article>
+<article class="food-card" data-category="pizza"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700" alt="Italian pizza"><div class="food-info"><h3>Italian Pizza</h3><p>Classic cheese, fresh toppings and Italian herbs.</p><div class="food-bottom"><span class="price">Rs. 1400</span><button class="add-btn" onclick="addCart('Italian Pizza',1400)">ADD +</button></div></div></article>
+<article class="food-card" data-category="salad"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=700" alt="Garden salad"><div class="food-info"><h3>Fresh Garden Salad</h3><p>Seasonal vegetables with our signature dressing.</p><div class="food-bottom"><span class="price">Rs. 550</span><button class="add-btn" onclick="addCart('Fresh Garden Salad',550)">ADD +</button></div></div></article>
+<article class="food-card" data-category="pasta"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=700" alt="Pasta"><div class="food-info"><h3>Creamy Alfredo Pasta</h3><p>Creamy sauce, parmesan and perfectly cooked pasta.</p><div class="food-bottom"><span class="price">Rs. 950</span><button class="add-btn" onclick="addCart('Creamy Alfredo Pasta',950)">ADD +</button></div></div></article>
+<article class="food-card" data-category="burger"><img src="https://images.unsplash.com/photo-1553979459-d2229ba7433a?w=700" alt="Chicken burger"><div class="food-info"><h3>Crispy Chicken Burger</h3><p>Crispy chicken, fresh vegetables and creamy sauce.</p><div class="food-bottom"><span class="price">Rs. 750</span><button class="add-btn" onclick="addCart('Crispy Chicken Burger',750)">ADD +</button></div></div></article>
+<article class="food-card" data-category="pizza"><img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=700" alt="Special pizza"><div class="food-info"><h3>Royal Special Pizza</h3><p>Our special combination of cheese and fresh toppings.</p><div class="food-bottom"><span class="price">Rs. 1650</span><button class="add-btn" onclick="addCart('Royal Special Pizza',1650)">ADD +</button></div></div></article>
+</div></div></section>
 
-<section id="menu">
-    <div class="section-title">
-        <h2>Our Special Menu</h2>
-        <p>Delicious food made with passion.</p>
-    </div>
+<section class="about" id="about"><div class="container about-grid">
+<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900" alt="Restaurant interior">
+<div><div class="eyebrow">OUR STORY</div><h2>More Than Food, It's An <span class="gold">Experience</span></h2>
+<p>At Royal Bites, we believe great food brings people together. Our menu combines carefully selected ingredients, creative recipes and a passion for memorable dining.</p>
+<p>From casual meals to special celebrations, we aim to make every visit special.</p><a href="#reservation" class="btn">VISIT US</a></div>
+</div></section>
 
-    <div class="menu-grid">
+<div class="stats"><div class="container stats-grid">
+<div class="stat"><h3>20+</h3><p>MENU ITEMS</p></div><div class="stat"><h3>5★</h3><p>QUALITY FOCUS</p></div><div class="stat"><h3>100%</h3><p>FRESHNESS</p></div><div class="stat"><h3>1</h3><p>ROYAL EXPERIENCE</p></div>
+</div></div>
 
-        <div class="food-card">
-            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80" alt="Burger">
-            <div class="food-info">
-                <h3>Classic Beef Burger</h3>
-                <p>Juicy beef, fresh vegetables and special sauce.</p>
-                <span class="price">Rs. 850</span>
-                <button onclick="order('Classic Beef Burger')">Order Now</button>
-            </div>
-        </div>
+<section id="reviews"><div class="container">
+<div class="section-head"><div class="eyebrow">TESTIMONIALS</div><h2>What People <span class="gold">Say</span></h2><p>Sample review designs for this restaurant demo.</p></div>
+<div class="review-grid">
+<div class="review"><div class="stars">★★★★★</div><p>"Beautiful presentation and a wonderful dining atmosphere."</p><strong>Guest Review</strong></div>
+<div class="review"><div class="stars">★★★★★</div><p>"A lovely place to enjoy delicious food with family."</p><strong>Guest Review</strong></div>
+<div class="review"><div class="stars">★★★★★</div><p>"Great menu design and an elegant restaurant experience."</p><strong>Guest Review</strong></div>
+</div></div></section>
 
-        <div class="food-card">
-            <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=700&q=80" alt="Pizza">
-            <div class="food-info">
-                <h3>Italian Pizza</h3>
-                <p>Fresh cheese, delicious toppings and crispy crust.</p>
-                <span class="price">Rs. 1,400</span>
-                <button onclick="order('Italian Pizza')">Order Now</button>
-            </div>
-        </div>
+<section class="reservation" id="reservation"><div class="container">
+<div class="section-head"><div class="eyebrow">YOUR TABLE AWAITS</div><h2>Make A <span class="gold">Reservation</span></h2><p>Send us your booking request through WhatsApp.</p></div>
+<form class="form" onsubmit="bookTable(event)">
+<div class="form-grid">
+<input id="guestName" type="text" placeholder="Your Name" required>
+<input id="guestPhone" type="tel" placeholder="Phone Number" required>
+<input id="guestDate" type="date" required>
+<select id="guestPeople" required><option value="">Number of Guests</option><option>1 Person</option><option>2 People</option><option>3 People</option><option>4 People</option><option>5 People</option><option>6+ People</option></select>
+</div>
+<textarea id="guestMessage" rows="4" placeholder="Special Request (Optional)"></textarea>
+<button class="btn" type="submit">SEND BOOKING REQUEST</button>
+</form></div></section>
 
-        <div class="food-card">
-            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=700&q=80" alt="Salad">
-            <div class="food-info">
-                <h3>Fresh Healthy Salad</h3>
-                <p>Fresh vegetables with a delicious dressing.</p>
-                <span class="price">Rs. 550</span>
-                <button onclick="order('Fresh Healthy Salad')">Order Now</button>
-            </div>
-        </div>
+<section id="contact"><div class="container">
+<div class="section-head"><div class="eyebrow">GET IN TOUCH</div><h2>Contact <span class="gold">Us</span></h2><p>We would love to hear from you.</p></div>
+<div class="contact-grid">
+<div class="contact-box"><h3>Our Location</h3><p>Lahore, Punjab, Pakistan</p></div>
+<div class="contact-box"><h3>Opening Hours</h3><p>Monday – Sunday<br>12:00 PM – 11:00 PM</p></div>
+<div class="contact-box"><h3>Contact</h3><p>Connect with us on WhatsApp<br>For orders and inquiries</p></div>
+</div></div></section>
 
-        <div class="food-card">
-            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=700&q=80" alt="Pasta">
-            <div class="food-info">
-                <h3>Creamy Pasta</h3>
-                <p>Rich creamy sauce with fresh herbs and pasta.</p>
-                <span class="price">Rs. 950</span>
-                <button onclick="order('Creamy Pasta')">Order Now</button>
-            </div>
-        </div>
+<footer><div class="container"><div class="logo">ROYAL <span>BITES</span></div><p>PREMIUM DINING EXPERIENCE</p><p>© 2026 Royal Bites. Demo restaurant website.</p></div></footer>
 
-    </div>
-</section>
-
-<section class="about" id="about">
-    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=85" alt="Restaurant dining">
-
-    <div>
-        <h2>About Royal Bites</h2>
-        <p>
-            At Royal Bites, we believe every meal should
-            be special. Our restaurant combines fresh
-            ingredients, delicious recipes and a welcoming
-            atmosphere.
-        </p>
-        <p>
-            Whether you are enjoying dinner with family
-            or celebrating a special occasion, we are here
-            to make your experience memorable.
-        </p>
-        <a href="#contact" class="btn">Contact Us</a>
-    </div>
-</section>
-
-<section id="reviews">
-    <div class="section-title">
-        <h2>Customer Reviews</h2>
-        <p>What our sample customers say.</p>
-    </div>
-
-    <div class="reviews">
-        <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>"Beautiful atmosphere and delicious food. A lovely dining experience."</p>
-            <strong>— Customer 1</strong>
-        </div>
-
-        <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>"The food presentation is amazing and the menu has great options."</p>
-            <strong>— Customer 2</strong>
-        </div>
-
-        <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>"A wonderful place to enjoy a meal with family and friends."</p>
-            <strong>— Customer 3</strong>
-        </div>
-    </div>
-</section>
-
-<section class="contact" id="contact">
-    <h2>Visit Royal Bites</h2>
-    <p>Address: Lahore, Pakistan (Demo Address)</p>
-    <p>Email: hello@royalbites.example</p>
-    <p>Opening Hours: 12 PM – 11 PM</p>
-    <a href="#" onclick="contactUs(event)" class="btn">Contact on WhatsApp</a>
-</section>
-
-<footer>
-    <p>© 2026 Royal Bites Restaurant. Demo Website.</p>
-    <p>Designed with AI assistance.</p>
-</footer>
+<aside class="cart-panel" id="cartPanel">
+<div class="cart-head"><h2>Your Cart</h2><button class="close" onclick="closeCart()">×</button></div>
+<div id="cartItems"></div>
+<div class="cart-total"><span>Total</span><span id="cartTotal">Rs. 0</span></div>
+<button class="btn" onclick="checkout()">ORDER ON WHATSAPP</button>
+</aside>
+<div class="toast" id="toast">Added to cart!</div>
 
 <script>
-function order(item) {
-    alert("Thank you! You selected: " + item +
-    ". Please contact the restaurant to confirm your order.");
+const WHATSAPP_NUMBER = "923001234567"; // Replace with your restaurant WhatsApp number.
+let cart = [];
+let toastTimer;
+
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("show");}
+document.querySelectorAll(".links a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navLinks").classList.remove("show")));
+
+function filterFood(category,button){
+ document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));
+ button.classList.add("active");
+ document.querySelectorAll(".food-card").forEach(card=>{
+  card.style.display=(category==="all"||card.dataset.category===category)?"block":"none";
+ });
 }
 
-function contactUs(event) {
-    event.preventDefault();
-
-    // Replace this with the restaurant's real WhatsApp number.
-    const phone = "923001234567";
-    const message = encodeURIComponent(
-        "Hello Royal Bites! I would like to make an inquiry."
-    );
-
-    window.open(
-        "https://wa.me/" + phone + "?text=" + message,
-        "_blank"
-    );
+function addCart(name,price){
+ const item=cart.find(x=>x.name===name);
+ if(item)item.qty++;else cart.push({name,price,qty:1});
+ updateCart();showToast(name+" added to cart!");
 }
+function changeQty(name,change){
+ const item=cart.find(x=>x.name===name);
+ if(!item)return;
+ item.qty+=change;
+ if(item.qty<=0)cart=cart.filter(x=>x.name!==name);
+ updateCart();
+}
+function updateCart(){
+ const count=cart.reduce((s,x)=>s+x.qty,0);
+ const total=cart.reduce((s,x)=>s+x.price*x.qty,0);
+ document.getElementById("cartCount").textContent=count;
+ document.getElementById("cartTotal").textContent="Rs. "+total.toLocaleString("en-PK");
+ const box=document.getElementById("cartItems");
+ if(!cart.length){box.innerHTML='<p style="color:#aaa;padding:25px 0">Your cart is empty.</p>';return;}
+ box.innerHTML=cart.map(x=>`
+ <div class="cart-item">
+  <div>${x.name}<small>Rs. ${x.price.toLocaleString("en-PK")} each</small></div>
+  <div class="qty-controls">
+   <button onclick="changeQty('${x.name}',-1)">−</button>
+   <span>${x.qty}</span>
+   <button onclick="changeQty('${x.name}',1)">+</button>
+  </div>
+ </div>`).join("");
+}
+function openCart(){document.getElementById("cartPanel").classList.add("open");}
+function closeCart(){document.getElementById("cartPanel").classList.remove("open");}
+function showToast(message){
+ const toast=document.getElementById("toast");
+ toast.textContent=message;toast.classList.add("show");
+ clearTimeout(toastTimer);
+ toastTimer=setTimeout(()=>toast.classList.remove("show"),2200);
+}
+function sendWhatsApp(message){
+ if(WHATSAPP_NUMBER==="923001234567"){
+  alert("Please replace WHATSAPP_NUMBER in the code with your restaurant's WhatsApp number first.");
+  return;
+ }
+ window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message),"_blank");
+}
+function checkout(){
+ if(!cart.length){showToast("Your cart is empty.");return;}
+ const lines=cart.map(x=>`${x.name} x ${x.qty} = Rs. ${x.price*x.qty}`).join("\n");
+ const total=cart.reduce((s,x)=>s+x.price*x.qty,0);
+ sendWhatsApp("Hello Royal Bites! I would like to place an order:\n\n"+lines+"\n\nTotal: Rs. "+total);
+}
+function bookTable(event){
+ event.preventDefault();
+ const name=document.getElementById("guestName").value.trim();
+ const phone=document.getElementById("guestPhone").value.trim();
+ const date=document.getElementById("guestDate").value;
+ const people=document.getElementById("guestPeople").value;
+ const note=document.getElementById("guestMessage").value.trim();
+ const message=`Hello Royal Bites! I would like to request a table reservation.\nName: ${name}\nPhone: ${phone}\nDate: ${date}\nGuests: ${people}\nSpecial request: ${note||"None"}\n\nPlease confirm availability.`;
+ sendWhatsApp(message);
+}
+updateCart();
 </script>
-
 </body>
 </html>
